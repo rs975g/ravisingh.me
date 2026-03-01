@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ravi Singh – Senior Engineering Leader | Cloud & AI Strategy</title>
+  <meta name="description" content="Senior Engineering Manager with a decade of large-scale cloud transformations, AI strategy, and engineering org leadership. 70+ engineers, $25M AWS portfolio, 1,500+ customers migrated to cloud." />
+  <meta name="author" content="Ravi Singh" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ravisingh.me" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ravisingh.me" />
+  <meta property="og:title" content="Ravi Singh – Senior Engineering Leader" />
+  <meta property="og:description" content="Engineering executive driving cloud transformations and AI strategy. 70+ engineers, $25M AWS portfolio, 20+ security certifications, AWS Summit speaker." />
+  <meta property="og:image" content="https://ravisingh.me/ravi-singh.jpeg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ravi Singh – Senior Engineering Leader" />
+  <meta name="twitter:description" content="Engineering executive driving cloud transformations and AI strategy. 70+ engineers, $25M AWS portfolio, AWS Summit speaker." />
+  <meta name="twitter:image" content="https://ravisingh.me/ravi-singh.jpeg" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0a0f1e;
+      --navy2: #111827;
+      --slate: #1e293b;
+      --accent: #3b82f6;
+      --accent2: #06b6d4;
+      --gold: #f59e0b;
+      --light: #f8fafc;
+      --muted: #94a3b8;
+      --text: #1e293b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,15,30,0.92);
+      backdrop-filter: blur(12px);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    nav .logo { color: #fff; font-weight: 700; font-size: 1rem; letter-spacing: 0.05em; }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a { color: #94a3b8; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    nav ul a:hover { color: #fff; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a0f1e 0%, #0f172a 50%, #0c1a2e 100%);
+      display: flex; align-items: center; justify-content: center;
+      padding: 6rem 2rem 3rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(59,130,246,0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 70%, rgba(6,182,212,0.08) 0%, transparent 50%);
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 1000px; width: 100%;
+      display: flex; align-items: center; gap: 4rem;
+    }
+    .hero-photo-wrap {
+      flex-shrink: 0;
+    }
+    .hero-photo {
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid rgba(59,130,246,0.5);
+      box-shadow: 0 0 0 6px rgba(59,130,246,0.1), 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .hero-text { flex: 1; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(59,130,246,0.15);
+      border: 1px solid rgba(59,130,246,0.3);
+      color: #93c5fd;
+      padding: 0.35rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span {
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: #94a3b8;
+      max-width: 560px;
+      margin: 0 0 2.5rem;
+      font-weight: 400;
+    }
+    .hero-cta {
+      display: inline-flex; gap: 1rem; flex-wrap: wrap;
+    }
+    @media (max-width: 720px) {
+      .hero-inner { flex-direction: column; text-align: center; gap: 2rem; }
+      .hero-sub { margin: 0 auto 2rem; }
+      .hero-cta { justify-content: center; }
+    }
+    .btn {
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: #fff;
+      border: none;
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: #e2e8f0;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); }
+
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    .section-desc {
+      color: #64748b;
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── METRICS ── */
+    .metrics { background: var(--navy2); }
+    .metrics .section-title { color: #fff; }
+    .metrics .section-desc { color: #94a3b8; }
+    .metrics .section-label { color: #60a5fa; }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+    .metric-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 1rem;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .metric-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-3px); }
+    .metric-num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .metric-label { font-size: 0.82rem; color: #94a3b8; font-weight: 500; }
+
+    /* ── TRANSFORMATIONS TIMELINE ── */
+    .transformations { background: #fff; }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #3b82f6, #06b6d4, #3b82f6);
+    }
+    .tl-item {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 1.75rem;
+    }
+    .tl-dot {
+      position: absolute; left: -2.4rem; top: 0.3rem;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #3b82f6;
+    }
+    .tl-company {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+    .tl-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+    }
+    .tl-period { font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.75rem; }
+    .tl-transformation {
+      background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(6,182,212,0.06));
+      border-left: 3px solid var(--accent);
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .tl-bullets { list-style: none; }
+    .tl-bullets li {
+      font-size: 0.9rem;
+      color: #475569;
+      padding: 0.25rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .tl-bullets li::before {
+      content: '→';
+      position: absolute; left: 0;
+      color: var(--accent2);
+      font-weight: 700;
+    }
+
+    /* ── MENDIX DEEP DIVE ── */
+    .mendix-section { background: var(--light); }
+    .initiatives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .initiative-card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.75rem;
+      border: 1px solid #e2e8f0;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .initiative-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .initiative-icon {
+      width: 42px; height: 42px;
+      border-radius: 0.6rem;
+      background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(6,182,212,0.12));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .initiative-title { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+    .initiative-desc { font-size: 0.875rem; color: #64748b; line-height: 1.6; }
+    .initiative-tag {
+      display: inline-block;
+      margin-top: 0.75rem;
+      background: rgba(59,130,246,0.08);
+      color: var(--accent);
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.3rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── LEADERSHIP PHILOSOPHY ── */
+    .philosophy { background: var(--navy); }
+    .philosophy .section-title { color: #fff; }
+    .philosophy .section-desc { color: #94a3b8; }
+    .philosophy .section-label { color: #60a5fa; }
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .pillar {
+      padding: 2rem 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+    }
+    .pillar-icon { font-size: 1.75rem; margin-bottom: 1rem; }
+    .pillar-title { font-size: 1rem; font-weight: 700; color: #e2e8f0; margin-bottom: 0.5rem; }
+    .pillar-desc { font-size: 0.875rem; color: #94a3b8; line-height: 1.6; }
+
+    /* ── SKILLS ── */
+    .skills-section { background: #fff; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .skill-group-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 0.35rem 0.75rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* ── AI IMPACT ── */
+    .ai-section {
+      background: linear-gradient(135deg, #0a0f1e 0%, #0d1b2e 50%, #0a1929 100%);
+    }
+    .ai-section .section-label { color: #34d399; }
+    .ai-section .section-title { color: #fff; }
+    .ai-section .section-desc { color: #94a3b8; }
+    .ai-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .ai-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(52,211,153,0.15);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .ai-card:hover { border-color: rgba(52,211,153,0.4); transform: translateY(-3px); }
+    .ai-card-icon {
+      width: 44px; height: 44px;
+      border-radius: 0.6rem;
+      background: linear-gradient(135deg, rgba(52,211,153,0.15), rgba(16,185,129,0.15));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .ai-card-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #34d399; margin-bottom: 0.3rem;
+    }
+    .ai-card-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.6rem; }
+    .ai-card-desc { font-size: 0.875rem; color: #94a3b8; line-height: 1.65; }
+
+    /* ── SPEAKING ── */
+    .speaking-section { background: var(--navy2); }
+    .speaking-section .section-label { color: #60a5fa; }
+    .speaking-section .section-title { color: #fff; }
+    .speaking-section .section-desc { color: #94a3b8; }
+    .speaking-card {
+      display: flex; gap: 2rem; align-items: flex-start;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: border-color 0.2s;
+    }
+    .speaking-card:hover { border-color: rgba(59,130,246,0.4); }
+    .speaking-logo {
+      flex-shrink: 0;
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, #FF9900, #FF6600);
+      border-radius: 0.75rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+    }
+    .speaking-event {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #f59e0b; margin-bottom: 0.3rem;
+    }
+    .speaking-title {
+      font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;
+    }
+    .speaking-desc { font-size: 0.875rem; color: #94a3b8; line-height: 1.6; }
+    .speaking-meta {
+      display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.75rem;
+    }
+    .speaking-chip {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: rgba(245,158,11,0.1);
+      border: 1px solid rgba(245,158,11,0.25);
+      color: #fcd34d;
+      padding: 0.25rem 0.75rem;
+      border-radius: 2rem;
+      font-size: 0.75rem; font-weight: 600;
+    }
+    @media (max-width: 640px) { .speaking-card { flex-direction: column; } }
+
+    /* ── SECURITY & COMPLIANCE ── */
+    .security-section { background: #fff; }
+    .cert-intro {
+      background: linear-gradient(135deg, rgba(59,130,246,0.05), rgba(6,182,212,0.05));
+      border: 1px solid rgba(59,130,246,0.15);
+      border-radius: 1rem;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.7;
+    }
+    .cert-intro strong { color: var(--navy); }
+    .cert-groups { display: flex; flex-direction: column; gap: 2rem; }
+    .cert-group-title {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .cert-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .cert-badge {
+      background: var(--navy);
+      color: #e2e8f0;
+      padding: 0.4rem 0.9rem;
+      border-radius: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: background 0.2s;
+    }
+    .cert-badge:hover { background: #1e293b; }
+    .cert-badge.highlight {
+      background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(6,182,212,0.15));
+      color: #93c5fd;
+      border-color: rgba(59,130,246,0.3);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    footer .name { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.25rem; }
+    footer .tagline { color: #64748b; font-size: 0.85rem; margin-bottom: 1.5rem; }
+    footer .contact a {
+      color: #60a5fa;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-size: 0.875rem;
+    }
+    footer .contact a:hover { color: #93c5fd; }
+
+    @media (max-width: 640px) {
+      nav ul { display: none; }
+      .timeline { padding-left: 1.25rem; }
+      .tl-dot { left: -1.65rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">RS</div>
+  <ul>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#mendix">At Mendix</a></li>
+    <li><a href="#ai">AI Impact</a></li>
+    <li><a href="#speaking">Speaking</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#skills">Expertise</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-photo-wrap">
+      <img src="ravi-singh.jpeg" alt="Ravi Singh" class="hero-photo" />
+    </div>
+    <div class="hero-text">
+      <div class="hero-badge">Engineering Leadership · Cloud &amp; AI Strategy</div>
+      <h1>I build platforms<br/>that <span>scale businesses</span>.</h1>
+      <p class="hero-sub">
+        Senior Engineering Manager driving large-scale cloud transformations, AI-powered operations, and high-performing engineering organizations — from a team of 6 to 70+ engineers across 10 globally distributed teams.
+      </p>
+      <div class="hero-cta">
+        <a href="#journey" class="btn btn-primary">See My Journey</a>
+        <a href="#impact" class="btn btn-outline">View Impact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="metrics" id="impact">
+  <div class="container">
+    <div class="section-label">By the Numbers</div>
+    <h2 class="section-title">Measurable outcomes at every step</h2>
+    <p class="section-desc">Across every role, the goal has been the same: deliver transformations that leave the organization permanently stronger.</p>
+    <div class="metrics-grid">
+      <div class="metric-card"><div class="metric-num">70+</div><div class="metric-label">Engineers Led Globally</div></div>
+      <div class="metric-card"><div class="metric-num">$25M</div><div class="metric-label">Annual Cloud Portfolio (AWS)</div></div>
+      <div class="metric-card"><div class="metric-num">$2.8M+</div><div class="metric-label">Cloud Cost Savings (2 Years)</div></div>
+      <div class="metric-card"><div class="metric-num">80%</div><div class="metric-label">Reduction in Platform Incidents</div></div>
+      <div class="metric-card"><div class="metric-num">1,500+</div><div class="metric-label">Customers Migrated to AWS Cloud</div></div>
+      <div class="metric-card"><div class="metric-num">99%</div><div class="metric-label">Platform Modernized to Kubernetes in 1 Year</div></div>
+      <div class="metric-card"><div class="metric-num">70%</div><div class="metric-label">Faster New Region Rollouts</div></div>
+      <div class="metric-card"><div class="metric-num">50%</div><div class="metric-label">MTTR Reduction via AIOps</div></div>
+      <div class="metric-card"><div class="metric-num">40%</div><div class="metric-label">Support Volume Reduction</div></div>
+      <div class="metric-card"><div class="metric-num">19</div><div class="metric-label">AWS Regions in Production</div></div>
+      <div class="metric-card"><div class="metric-num">32+</div><div class="metric-label">Kubernetes Clusters Managed</div></div>
+      <div class="metric-card"><div class="metric-num">3,500+</div><div class="metric-label">Customer Apps with End-to-End Automation</div></div>
+      <div class="metric-card"><div class="metric-num">2,400+</div><div class="metric-label">CI/CD Pipelines Automated</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER TRANSFORMATIONS TIMELINE -->
+<section class="transformations" id="journey">
+  <div class="container">
+    <div class="section-label">Career Journey</div>
+    <h2 class="section-title">A decade of leading transformations</h2>
+    <p class="section-desc">Every role has been defined by stepping into complexity, architecting a path forward, and delivering change that outlasts tenure.</p>
+
+    <div class="timeline">
+
+      <!-- MENDIX -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-company">Mendix (Siemens) · Rotterdam</div>
+        <div class="tl-title">Senior Engineering Manager, Public Cloud</div>
+        <div class="tl-period">Dec 2018 – Present</div>
+        <div class="tl-transformation">Transformation: Built and scaled a world-class cloud engineering organization from the ground up</div>
+        <ul class="tl-bullets">
+          <li>Grew the cloud organization from 6 engineers to 70+, building 10 teams across EMEA, APAC, and the US with 16 leads and a pipeline of principal engineers</li>
+          <li>Led the full migration of Mendix Public Cloud from on-premises data centres to AWS, including data migration for 1,500+ customers, with zero disruption and full end-to-end automation</li>
+          <li>Completed a 99% legacy container platform-to-Kubernetes modernization in under 12 months, making it one of the fastest and most complete migrations in Mendix's history</li>
+          <li>Architected fully automated cluster and region provisioning, reducing time-to-market for new regions by 70% and enabling rapid global expansion</li>
+          <li>Orchestrated the Unified Cloud Platform (UCP) re-organisation: created clear ownership, centralized infrastructure, and simplified execution across 8 products and 32 clusters in 18 AWS regions</li>
+          <li>Founded the AI Excellence Group and delivered 6 AIOps tools, reducing MTTR by 50%, cutting support volume by 40%, and enabling autonomous cloud operations</li>
+          <li>Saved $2.8M+ in cloud spend through systematic FinOps practices across a $25M annual AWS portfolio</li>
+          <li>Reduced platform-wide incidents by 80% through proactive engineering, incident process redesign, and automation</li>
+          <li>Led AWS Control Tower migration, unifying account structure and access governance across the entire R&amp;D organization</li>
+          <li>Drove security posture hardening with Snyk, CrowdStrike, Lacework, and Wiz, providing a single compliance view across all infrastructure and services</li>
+          <li>Primary security owner for the Public Cloud platform: led internal and external audits, automated the audit review process with Jira, and partnered with Security, Compliance, and Legal to achieve 20+ industry certifications including ISO 27001, SOC 2 Type 2, FedRAMP, PCI-DSS, and HIPAA-HITECH</li>
+          <li>Presented at <strong>AWS Summit 2023 in Zurich, Switzerland</strong>, speaking on multi-regional architecture for the Mendix Public Cloud, covering highest-tier disaster recovery, global resiliency, and data sovereignty at scale</li>
+        </ul>
+      </div>
+
+      <!-- JPMC -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-company">J.P. Morgan Chase · Bangalore</div>
+        <div class="tl-title">Senior Site Reliability Engineer</div>
+        <div class="tl-period">Sep 2018 – Nov 2018</div>
+        <div class="tl-transformation">Transformation: Designed a legacy-platform-to-Kubernetes migration strategy within weeks of joining</div>
+        <ul class="tl-bullets">
+          <li>Assessed legacy container infrastructure and produced a structured migration plan with CI/CD rewiring for a seamless transition to Kubernetes</li>
+          <li>Automated 120 legacy platform cluster deployments using Concourse, cutting deployment times by 8×</li>
+          <li>Established SLI/SLO observability frameworks and auto-scaling algorithms for production cloud clusters</li>
+        </ul>
+      </div>
+
+      <!-- GE DIGITAL -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-company">GE Digital · Bangalore</div>
+        <div class="tl-title">Cloud Operations &amp; SRE Engineer</div>
+        <div class="tl-period">Sep 2017 – Sep 2018</div>
+        <div class="tl-transformation">Transformation: Became the go-to expert for GE's Industrial IoT cloud platform on AWS</div>
+        <ul class="tl-bullets">
+          <li>Essential SRE and subject matter expert for Predix, GE's industrial IoT product running on a cloud-native platform on AWS</li>
+          <li>Owned backend reliability for time-series databases, server optimization, cost governance, and cloud security</li>
+          <li>Eliminated manual operations by building self-service capabilities that gave teams direct control over their environments</li>
+          <li>Led monitoring strategy using New Relic, Splunk, and Sensu; served as incident manager for the APAC region</li>
+        </ul>
+      </div>
+
+      <!-- ACCENTURE -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-company">Accenture · Bangalore (Client: AT&amp;T)</div>
+        <div class="tl-title">Senior Software Engineer</div>
+        <div class="tl-period">Jan 2014 – Sep 2017</div>
+        <div class="tl-transformation">Transformation: Led migration of legacy mainframe systems and 20+ Unix servers to modern Java/Linux stack</div>
+        <ul class="tl-bullets">
+          <li>Spearheaded the rewrite of mission-critical legacy mainframe applications to Java, JavaScript, and modern web stacks for a major US telecom client</li>
+          <li>Migrated 20+ Unix servers to Linux, leading the offshore development team and managing end-to-end delivery</li>
+          <li>Built CI/CD pipelines and introduced Gitflow across the team, establishing engineering best practices from scratch</li>
+          <li>Earned H1B visa sponsorship in the first and second year consecutively. A direct reflection of demonstrated impact and trust placed by leadership</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MENDIX DEEP DIVE -->
+<section class="mendix-section" id="mendix">
+  <div class="container">
+    <div class="section-label">Mendix · 6 Years</div>
+    <h2 class="section-title">Major initiatives that shaped the platform</h2>
+    <p class="section-desc">From infrastructure re-architecture to AI operations, each initiative was a deliberate bet on the future.</p>
+
+    <div class="initiatives-grid">
+
+      <div class="initiative-card">
+        <div class="initiative-icon">☁️</div>
+        <div class="initiative-title">On-Premises to AWS Cloud Migration</div>
+        <div class="initiative-desc">Led the full migration of Mendix Public Cloud from on-premises data centres to AWS, covering data migration for 1,500+ customers. Architected the execution plan, built full automation around it, and delivered with zero customer friction.</div>
+        <span class="initiative-tag">Platform Migration</span>
+      </div>
+
+      <div class="initiative-card">
+        <div class="initiative-icon">⚙️</div>
+        <div class="initiative-title">Platform Modernization: Legacy to Kubernetes</div>
+        <div class="initiative-desc">Completed 99% of this high-stakes modernization from a legacy container platform to Kubernetes in under 12 months. Coordinated cross-team workstreams, redesigned CI/CD pipelines, and maintained production stability throughout.</div>
+        <span class="initiative-tag">Infrastructure Transformation</span>
+      </div>
+
+      <div class="initiative-card">
+        <div class="initiative-icon">🚀</div>
+        <div class="initiative-title">Automated Region Rollout</div>
+        <div class="initiative-desc">Designed fully automated cluster and region provisioning, reducing time-to-market for new regions by 70%. Enabled Mendix to expand its global footprint on demand across 19 AWS regions.</div>
+        <span class="initiative-tag">Automation · FinOps</span>
+      </div>
+
+      <div class="initiative-card">
+        <div class="initiative-icon">🏗️</div>
+        <div class="initiative-title">UCP Re-Organisation</div>
+        <div class="initiative-desc">Drove a multi-year re-org creating the Unified Cloud Platform (UCP), CCoE, and DevX. Established clear component ownership, centralized infrastructure, and eliminated duplication across 8 products.</div>
+        <span class="initiative-tag">Org Design · Strategy</span>
+      </div>
+
+      <div class="initiative-card">
+        <div class="initiative-icon">🤖</div>
+        <div class="initiative-title">MxICE: AIOps Platform</div>
+        <div class="initiative-desc">Founded the AI Excellence Group and built 6 AI-powered tools including Prism and the Interrupt Bot. Cut MTTR by 50% and reduced support volume by 40% through autonomous operations and intelligent alerting.</div>
+        <span class="initiative-tag">AI · AIOps</span>
+      </div>
+
+      <div class="initiative-card">
+        <div class="initiative-icon">🔐</div>
+        <div class="initiative-title">Security Posture Hardening</div>
+        <div class="initiative-desc">Deployed and integrated Snyk, CrowdStrike, Lacework, and Wiz across all infrastructure. Created a unified security dashboard giving a single view of posture, compliance, and SLA adherence.</div>
+        <span class="initiative-tag">Security · Compliance</span>
+      </div>
+
+      <div class="initiative-card">
+        <div class="initiative-icon">🌐</div>
+        <div class="initiative-title">AWS Control Tower Migration</div>
+        <div class="initiative-desc">Moved the entire R&amp;D organization to AWS Control Tower, unifying account structure, access governance, and security guardrails across all teams and environments.</div>
+        <span class="initiative-tag">Cloud Governance</span>
+      </div>
+
+      <div class="initiative-card">
+        <div class="initiative-icon">💰</div>
+        <div class="initiative-title">FinOps &amp; Cost Governance</div>
+        <div class="initiative-desc">Implemented systematic FinOps practices across a $25M annual cloud portfolio. Delivered $2.8M+ in savings over two years through budgeting discipline, rightsizing, and architectural optimization.</div>
+        <span class="initiative-tag">FinOps</span>
+      </div>
+
+      <div class="initiative-card">
+        <div class="initiative-icon">👥</div>
+        <div class="initiative-title">Organization Building</div>
+        <div class="initiative-desc">Scaled from 6 to 70+ engineers across 10 teams. Hired 30+ engineers, grew 2 engineers into Engineering Managers, created 10+ new Tech and Team Leads, and built 4 net-new teams from scratch.</div>
+        <span class="initiative-tag">People &amp; Culture</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AI IMPACT -->
+<section class="ai-section" id="ai">
+  <div class="container">
+    <div class="section-label">AI Leadership</div>
+    <h2 class="section-title">Making AI a force multiplier across engineering</h2>
+    <p class="section-desc">Not just adopting AI tools, but embedding an AI-first mindset into every team, every workflow, and every layer of the platform.</p>
+
+    <div class="ai-grid">
+
+      <div class="ai-card">
+        <div class="ai-card-icon">🧠</div>
+        <div class="ai-card-label">Culture &amp; Enablement</div>
+        <div class="ai-card-title">AI-First Engineering Culture</div>
+        <div class="ai-card-desc">
+          Drove an organization-wide AI-first approach, ensuring every development team has access to leading AI tools including LLMs such as Claude and Codex.
+          Established clear usage guardrails aligned with all active security certifications and data privacy requirements, enabling engineers to move fast without compromising compliance.
+        </div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-icon">⚡</div>
+        <div class="ai-card-label">AIOps · MxICE</div>
+        <div class="ai-card-title">AI-Powered Operations and Incident Resolution</div>
+        <div class="ai-card-desc">
+          Founded a volunteer-based group to build the initial framework for AI-driven cloud operations.
+          The tooling helps Support and second-line operations teams identify root causes in minutes instead of hours, reducing mean time to resolution on support tickets by 50%.
+          Turned reactive troubleshooting into a proactive, intelligence-driven process.
+        </div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-icon">🔧</div>
+        <div class="ai-card-label">Autonomous Cloud Engineering · MxACE</div>
+        <div class="ai-card-title">AI Embedded in the Full Software Lifecycle</div>
+        <div class="ai-card-desc">
+          Introduced AI across the entire software development lifecycle: from automated code review and build assistance to CI/CD pipeline templates enriched with AI-driven quality gates.
+          The MxACE (Autonomous Cloud Engineering) group was formed to systematically expand this across all cloud teams, reducing manual effort and increasing delivery consistency.
+        </div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-icon">🌐</div>
+        <div class="ai-card-label">Community &amp; Literacy</div>
+        <div class="ai-card-title">AI-Lab: Building AI Literacy Across R&amp;D</div>
+        <div class="ai-card-desc">
+          Launched the AI-Lab channel within R&amp;D to consolidate AI initiatives, share experiments, and create a space for engineers to learn from each other.
+          Organised pairing sessions and structured knowledge exchanges to grow AI literacy across all teams, ensuring that AI capability is distributed, not siloed.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING & RECOGNITION -->
+<section class="speaking-section" id="speaking">
+  <div class="container">
+    <div class="section-label">Speaking &amp; Recognition</div>
+    <h2 class="section-title">Taking ideas to the global stage</h2>
+    <p class="section-desc">Sharing architecture decisions and hard-won lessons with the broader engineering community.</p>
+
+    <div class="speaking-card">
+      <div class="speaking-logo">☁️</div>
+      <div>
+        <div class="speaking-event">AWS Summit 2023 · Zurich, Switzerland</div>
+        <div class="speaking-title">Multi-Regional Architecture for Enterprise Public Cloud: Highest-Tier DR, Global Resiliency &amp; Data Sovereignty</div>
+        <div class="speaking-desc">
+          Presented Mendix's multi-regional cloud architecture to an audience of AWS customers, engineers, and executives at AWS Summit Zurich 2023.
+          The talk covered how we designed an active-active, multi-region setup across 19 AWS regions to deliver the highest tier of disaster recovery,
+          sub-second failover, and strict data sovereignty guarantees, all while maintaining a single pane of glass for operations.
+          Walked through the architectural trade-offs, automation strategies, and how the platform serves 19,000+ production applications at global scale.
+        </div>
+        <div class="speaking-meta">
+          <span class="speaking-chip">🎤 Conference Talk</span>
+          <span class="speaking-chip">📍 Zurich, Switzerland</span>
+          <span class="speaking-chip">🗓 2023</span>
+          <span class="speaking-chip">☁️ AWS Summit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY & COMPLIANCE -->
+<section class="security-section" id="security">
+  <div class="container">
+    <div class="section-label">Security &amp; Compliance</div>
+    <h2 class="section-title">Cloud security ownership, end to end</h2>
+    <p class="section-desc">Security isn't a team: it's an outcome. I've owned it that way.</p>
+
+    <div class="cert-intro">
+      As the <strong>primary security owner for Mendix Public Cloud</strong>, I have been the engineering lead across every major audit, pentest, and compliance initiative. Working closely with the CISO, Security, Compliance, and Legal teams, I automated the audit review and evidence-collection process using Jira integrations — turning a manual, quarterly scramble into a continuous, always-audit-ready posture. The result: Mendix holds <strong>20+ industry certifications</strong>, covering healthcare, government, financial services, and enterprise cloud workloads globally. All certifications can be verified at <a href="https://www.mendix.com/trust/" target="_blank" style="color:var(--accent);">mendix.com/trust</a>.
+    </div>
+
+    <div class="cert-groups">
+      <div>
+        <div class="cert-group-title">ISO Standards</div>
+        <div class="cert-badges">
+          <span class="cert-badge highlight">ISO 27001</span>
+          <span class="cert-badge highlight">ISO 27017</span>
+          <span class="cert-badge highlight">ISO 27018</span>
+          <span class="cert-badge">ISO 27701</span>
+          <span class="cert-badge">ISO 22301</span>
+          <span class="cert-badge">ISO 9001</span>
+        </div>
+      </div>
+      <div>
+        <div class="cert-group-title">Audit &amp; Assurance</div>
+        <div class="cert-badges">
+          <span class="cert-badge highlight">SOC 2 Type 2</span>
+          <span class="cert-badge highlight">SOC 1 Type 2</span>
+          <span class="cert-badge">SOC 3 Type 2</span>
+          <span class="cert-badge">ISAE 3402</span>
+          <span class="cert-badge">ISAE 3000</span>
+        </div>
+      </div>
+      <div>
+        <div class="cert-group-title">Regulatory &amp; Industry Compliance</div>
+        <div class="cert-badges">
+          <span class="cert-badge highlight">FedRAMP</span>
+          <span class="cert-badge highlight">HIPAA-HITECH</span>
+          <span class="cert-badge highlight">PCI-DSS</span>
+          <span class="cert-badge">NEN 7510</span>
+          <span class="cert-badge">DigiD</span>
+          <span class="cert-badge">ENS</span>
+          <span class="cert-badge">NIS2</span>
+          <span class="cert-badge">CSA STAR</span>
+          <span class="cert-badge">Cyber Essentials</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP PHILOSOPHY -->
+<section class="philosophy" id="philosophy">
+  <div class="container">
+    <div class="section-label">How I Lead</div>
+    <h2 class="section-title">Leadership that compounds over time</h2>
+    <p class="section-desc">The best engineering organizations don't just deliver: they raise the ceiling of what's possible each year.</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">🔭</div>
+        <div class="pillar-title">Transformation First</div>
+        <div class="pillar-desc">I enter every role looking for the structural change that will have the most durable impact, then build the organization and the plan to execute it.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">📐</div>
+        <div class="pillar-title">Clarity at Scale</div>
+        <div class="pillar-desc">As scope grows, complexity compounds. I invest heavily in clear ownership, well-defined interfaces, and operational simplicity so teams can move fast without coordination overhead.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🌱</div>
+        <div class="pillar-title">Growing Leaders</div>
+        <div class="pillar-desc">My measure of success is how many leaders I leave behind. I actively create stretch opportunities, sponsor engineers into management, and build organizations that don't depend on any single person.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">📊</div>
+        <div class="pillar-title">Engineering as a Business</div>
+        <div class="pillar-desc">Every technical decision has a business consequence. I connect engineering outcomes to company-level OKRs, FinOps discipline, and go-to-market strategy, bridging the gap between execution and leadership.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
+  <div class="container">
+    <div class="section-label">Expertise</div>
+    <h2 class="section-title">Deep fluency across the stack</h2>
+    <p class="section-desc">Technical depth that earns credibility, strategic breadth that drives outcomes.</p>
+
+    <div class="skills-grid">
+      <div>
+        <div class="skill-group-title">Leadership &amp; Strategy</div>
+        <div class="tags">
+          <span class="tag">Engineering Strategy</span>
+          <span class="tag">Org Design</span>
+          <span class="tag">OKR Planning (SAFe)</span>
+          <span class="tag">Stakeholder Management</span>
+          <span class="tag">Vendor Management</span>
+          <span class="tag">FinOps</span>
+          <span class="tag">Incident Management</span>
+          <span class="tag">Go-to-Market Strategy</span>
+          <span class="tag">Executive Communication</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Cloud &amp; Platform</div>
+        <div class="tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Azure</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">CloudFoundry</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Spacelift</span>
+          <span class="tag">AWS Control Tower</span>
+          <span class="tag">Multi-Region Architecture</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">AI &amp; Automation</div>
+        <div class="tags">
+          <span class="tag">AI Strategy</span>
+          <span class="tag">AIOps</span>
+          <span class="tag">LLM Integration</span>
+          <span class="tag">CI/CD (GitLab, Jenkins, ArgoCD)</span>
+          <span class="tag">Datadog</span>
+          <span class="tag">Prometheus</span>
+          <span class="tag">Grafana</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Security &amp; Engineering</div>
+        <div class="tags">
+          <span class="tag">Snyk</span>
+          <span class="tag">CrowdStrike</span>
+          <span class="tag">Wiz</span>
+          <span class="tag">Lacework</span>
+          <span class="tag">Python</span>
+          <span class="tag">Golang</span>
+          <span class="tag">Java</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="name">Ravi Singh</div>
+  <div class="tagline">Senior Engineering Manager · Rotterdam, Netherlands</div>
+  <div class="contact">
+    <a href="mailto:ravi218@gmail.com">ravi218@gmail.com</a>
+    <a href="tel:+31611504295">+31 611 504 295</a>
+    <a href="https://www.linkedin.com/in/ravisingh218" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+</body>
+</html>
