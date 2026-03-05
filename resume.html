@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ravi Singh – Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f1f3d;
+      --accent: #1a56db;
+      --mid: #374151;
+      --muted: #6b7280;
+      --rule: #e5e7eb;
+      --bg-chip: #eff6ff;
+      --chip-text: #1e40af;
+    }
+
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 9.2pt;
+      line-height: 1.45;
+      color: #1f2937;
+      background: #fff;
+      width: 210mm;
+      margin: 0 auto;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 13mm 17mm 12mm;
+    }
+
+    /* ── HEADER ── */
+    .header { margin-bottom: 9px; }
+    .header-top { display: flex; justify-content: space-between; align-items: flex-end; }
+    h1 {
+      font-family: 'Inter Tight', 'Inter', sans-serif;
+      font-size: 22pt;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .header-title {
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 3px;
+      letter-spacing: 0.01em;
+    }
+    .contact {
+      text-align: right;
+      font-size: 8pt;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+    .contact a { color: var(--accent); text-decoration: none; }
+    .header-rule {
+      height: 2px;
+      background: linear-gradient(90deg, var(--navy) 0%, var(--accent) 60%, #e5e7eb 100%);
+      margin-top: 7px;
+    }
+
+    /* ── SUMMARY ── */
+    .summary {
+      margin: 9px 0;
+      font-size: 9pt;
+      color: var(--mid);
+      line-height: 1.55;
+      border-left: 3px solid var(--accent);
+      padding-left: 9px;
+    }
+
+    /* ── IMPACT ROW ── */
+    .impact-row {
+      display: flex;
+      gap: 0;
+      background: var(--navy);
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 9px 0;
+    }
+    .impact-item {
+      flex: 1;
+      padding: 7px 5px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .impact-item:last-child { border-right: none; }
+    .impact-num {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #60a5fa;
+      line-height: 1;
+      display: block;
+    }
+    .impact-label {
+      font-size: 6.5pt;
+      color: #94a3b8;
+      display: block;
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    /* ── SECTION TITLES ── */
+    .section {
+      margin-top: 10px;
+    }
+    .section-head {
+      font-size: 7pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      border-bottom: 1.5px solid var(--rule);
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+    }
+
+    /* ── EXPERIENCE ── */
+    .job { margin-bottom: 9px; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+    .job-company {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .job-period {
+      font-size: 8pt;
+      color: var(--muted);
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+    .job-title {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .job-tag {
+      display: inline-block;
+      background: var(--bg-chip);
+      color: var(--chip-text);
+      font-size: 6.5pt;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-right: 3px;
+      margin-bottom: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+    }
+    ul.bullets li {
+      padding-left: 10px;
+      position: relative;
+      margin-bottom: 2.5px;
+      font-size: 8.8pt;
+      color: #374151;
+      line-height: 1.45;
+    }
+    ul.bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 7pt;
+      top: 1px;
+    }
+    ul.bullets li strong { color: var(--navy); font-weight: 600; }
+
+    /* ── TWO COLUMNS ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+    .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 16px; }
+
+    /* ── SKILLS ── */
+    .skill-group { margin-bottom: 6px; }
+    .skill-label {
+      font-size: 7pt;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 3px; }
+    .skill-tag {
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 7.5pt;
+      padding: 1.5px 5px;
+      border-radius: 3px;
+    }
+
+    /* ── SPEAKING ── */
+    .speaking-item { font-size: 8.5pt; color: var(--mid); }
+    .speaking-item strong { color: var(--navy); }
+
+    /* ── PAGE BREAK ── */
+    .page-break { page-break-after: always; break-after: always; }
+
+    /* ── PRINT ── */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    @media print {
+      body { margin: 0; }
+      .page { page-break-after: always; break-after: always; }
+      .page:last-child { page-break-after: avoid; break-after: avoid; }
+      a { color: inherit !important; text-decoration: none !important; }
+      .contact a { color: var(--accent) !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ PAGE 1 ═══════════════════════════ -->
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <h1>Ravi Singh</h1>
+        <div class="header-title">Senior Engineering Manager &nbsp;·&nbsp; Cloud, AI &amp; Platform Strategy</div>
+      </div>
+      <div class="contact">
+        Rotterdam, Netherlands &nbsp;·&nbsp; Dutch National<br/>
+        ravi218@gmail.com &nbsp;·&nbsp; +31 611 504 295<br/>
+        <a href="https://www.linkedin.com/in/ravi-singh-lnkdin/">linkedin.com/in/ravi-singh-lnkdin</a> &nbsp;·&nbsp; <a href="https://ravisingh.me">ravisingh.me</a>
+      </div>
+    </div>
+    <div class="header-rule"></div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    Engineer at heart, leader by practice. I bring deep hands-on technical expertise together with broad experience across people, strategy, sales, security, customer success, and executive stakeholder management.
+    Over a decade of driving platform transformations from first principles — architecting the plan, making the build-vs-buy calls, building the teams, and delivering outcomes that compound long after the project closes.
+    I operate at the intersection of engineering execution and commercial reality, and have led organisations through multiple generational shifts in Cloud and AI.
+  </div>
+
+  <!-- IMPACT ROW -->
+  <div class="impact-row">
+    <div class="impact-item"><span class="impact-num">70+</span><span class="impact-label">Engineers Led<br/>Globally</span></div>
+    <div class="impact-item"><span class="impact-num">$25M</span><span class="impact-label">AWS Cloud<br/>Portfolio</span></div>
+    <div class="impact-item"><span class="impact-num">$2.8M+</span><span class="impact-label">Cloud Cost<br/>Savings</span></div>
+    <div class="impact-item"><span class="impact-num">1,500+</span><span class="impact-label">Customers<br/>Migrated</span></div>
+    <div class="impact-item"><span class="impact-num">3,500+</span><span class="impact-label">Customer Apps<br/>Automated</span></div>
+    <div class="impact-item"><span class="impact-num">80%</span><span class="impact-label">Incident<br/>Reduction</span></div>
+    <div class="impact-item"><span class="impact-num">50%</span><span class="impact-label">MTTR<br/>Reduction</span></div>
+    <div class="impact-item"><span class="impact-num">20+</span><span class="impact-label">Security<br/>Certifications</span></div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-head">Experience</div>
+
+    <!-- MENDIX -->
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">Mendix (Siemens) &nbsp;—&nbsp; Rotterdam, Netherlands</span>
+        <span class="job-period">Dec 2018 – Present</span>
+      </div>
+      <div class="job-title">Senior Engineering Manager, Public Cloud</div>
+      <div>
+        <span class="job-tag">Cloud Architecture</span>
+        <span class="job-tag">AI Strategy</span>
+        <span class="job-tag">Org Design</span>
+        <span class="job-tag">FinOps</span>
+        <span class="job-tag">Security &amp; Compliance</span>
+        <span class="job-tag">Executive Stakeholders</span>
+        <span class="job-tag">Vendor Management</span>
+        <span class="job-tag">AWS</span>
+      </div>
+      <ul class="bullets">
+        <li><strong>Platform Transformation:</strong> Driving force behind three generations of the Mendix Public Cloud — from on-premises infrastructure to a self-hosted Cloud platform on AWS, then to fully Kubernetes-native on AWS EKS. Defined the strategic roadmap for each, secured organisational buy-in, and led cross-team delivery with zero customer disruption across 1,500+ migrated deployments</li>
+        <li><strong>AI-Operated Platform:</strong> Led the transition to AI-operated Kubernetes deployments — introducing autonomous workflows for customer-facing support operations and significantly automating SRE processes. Founded the AI Excellence Group, delivered 6 AIOps tools, cut MTTR by 50%, and reduced support volume by 40%</li>
+        <li><strong>AI Across the SDLC:</strong> Drove an AI-first engineering culture across all teams — enabling access to LLMs (Claude, Codex) with security-aligned guardrails, embedding AI into build, code review, and CI/CD pipelines through the MxACE (Autonomous Cloud Engineering) group, and launching the AI-Lab community to grow AI literacy across R&amp;D</li>
+        <li><strong>Build vs Buy:</strong> Led all major tooling decisions across the platform — evaluated and onboarded Datadog, Spacelift, Tailscale, Snyk, CrowdStrike, Wiz, and Lacework. Primary point of contact for AWS, driving QBRs, architectural reviews, and partnership strategy</li>
+        <li><strong>Team Building &amp; Org Design:</strong> Scaled the Cloud organisation from 6 to 70+ engineers across EMEA, APAC, and the US. Built 10 teams, developed 16 leads, grew 2 engineers into Engineering Managers. Orchestrated the Unified Cloud Platform (UCP) re-org, establishing clear ownership across 8 products, 32 clusters, and 18 AWS regions</li>
+        <li><strong>Executive &amp; Cross-Functional Leadership:</strong> Primary escalation point for major customer incidents, Security, Support, and CSMs for all Public Cloud matters. Partner to the CISO on Cloud security posture, audits, and certifications. Collaborated with Product on OKR planning (SAFe) and with commercial leadership on go-to-market strategy</li>
+        <li><strong>Security &amp; Compliance:</strong> Owned the full security posture of the Public Cloud platform — led internal and external audits, automated the audit review process, and partnered with Security, Compliance, and Legal to achieve 20+ certifications including ISO 27001, SOC 2 Type 2, FedRAMP, PCI-DSS, and HIPAA-HITECH</li>
+        <li><strong>FinOps:</strong> Saved $2.8M+ across a $25M annual AWS portfolio through systematic cost governance, rightsizing, and budgeting discipline. Reduced platform-wide incidents by 80%</li>
+        <li><strong>AWS Summit 2023 – Zurich, Switzerland:</strong> Presented on multi-regional architecture for the Mendix Public Cloud, covering highest-tier disaster recovery, global resiliency, and data sovereignty at scale</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════ PAGE 2 ═══════════════════════════ -->
+<div class="page">
+
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <h1 style="font-size:14pt;">Ravi Singh &nbsp;<span style="font-size:9pt;font-weight:400;color:#6b7280;">— continued</span></h1>
+      </div>
+      <div class="contact">
+        ravi218@gmail.com &nbsp;·&nbsp; <a href="https://ravisingh.me">ravisingh.me</a>
+      </div>
+    </div>
+    <div class="header-rule"></div>
+  </div>
+
+  <div class="section" style="margin-top:8px;">
+    <div class="section-head">Earlier Experience</div>
+
+    <div class="two-col">
+      <div>
+        <!-- JPMC -->
+        <div class="job">
+          <div class="job-header">
+            <span class="job-company">J.P. Morgan Chase</span>
+            <span class="job-period">Sep – Nov 2018</span>
+          </div>
+          <div class="job-title">Senior Site Reliability Engineer &nbsp;·&nbsp; Bangalore</div>
+          <ul class="bullets">
+            <li>Designed a full Kubernetes migration strategy from legacy container infrastructure within weeks of joining, independently producing the execution plan and CI/CD rewiring approach</li>
+            <li>Automated 120 cluster deployments using Concourse, cutting deployment times by 8×</li>
+            <li>Built SLI/SLO observability frameworks and auto-scaling algorithms for production Cloud clusters from scratch</li>
+          </ul>
+        </div>
+
+        <!-- GE DIGITAL -->
+        <div class="job" style="margin-top:8px;">
+          <div class="job-header">
+            <span class="job-company">GE Digital</span>
+            <span class="job-period">Sep 2017 – Sep 2018</span>
+          </div>
+          <div class="job-title">Cloud Operations &amp; SRE Engineer &nbsp;·&nbsp; Bangalore</div>
+          <ul class="bullets">
+            <li>Hands-on SRE and subject matter expert for Predix, GE's industrial IoT platform on AWS — directly owned reliability for time-series databases, cost governance, and Cloud security</li>
+            <li>Engineered self-service capabilities that eliminated operational toil and gave product teams direct environment control</li>
+            <li>Built the full monitoring stack (New Relic, Splunk, Sensu) and personally led incident response as on-call manager for the APAC region</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <!-- ACCENTURE -->
+        <div class="job">
+          <div class="job-header">
+            <span class="job-company">Accenture &nbsp;(Client: AT&amp;T)</span>
+            <span class="job-period">Jan 2014 – Sep 2017</span>
+          </div>
+          <div class="job-title">Senior Software Engineer &nbsp;·&nbsp; Bangalore</div>
+          <ul class="bullets">
+            <li>Full-stack engineer on a major legacy modernisation — rewrote mission-critical mainframe applications to Java, JavaScript, and modern web stacks for a US telecom client</li>
+            <li>Hands-on migration of 20+ Unix servers to Linux, coordinating offshore delivery end to end</li>
+            <li>Built CI/CD pipelines and introduced Gitflow, raising engineering standards across the project</li>
+            <li>Sponsored by Accenture for US work authorisation (H1B) in the first and second year consecutively — a direct reflection of demonstrated impact and trust</li>
+          </ul>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section" style="margin-top:10px;">
+          <div class="section-head">Education</div>
+          <div style="font-size:8.8pt;">
+            <strong style="color:var(--navy);">B.E. Electronics &amp; Communication Engineering</strong><br/>
+            <span style="color:var(--muted);">Gandhi Engineering College, Bhubaneswar &nbsp;·&nbsp; 2009 – 2013</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section" style="margin-top:10px;">
+    <div class="section-head">Core Skills &amp; Expertise</div>
+    <div class="three-col">
+      <div>
+        <div class="skill-group">
+          <div class="skill-label">Leadership &amp; Strategy</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Engineering Strategy</span>
+            <span class="skill-tag">Org Design</span>
+            <span class="skill-tag">OKR / SAFe</span>
+            <span class="skill-tag">Executive Stakeholders</span>
+            <span class="skill-tag">Vendor Management</span>
+            <span class="skill-tag">Build vs Buy</span>
+            <span class="skill-tag">FinOps</span>
+            <span class="skill-tag">Go-to-Market</span>
+            <span class="skill-tag">Incident Management</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group">
+          <div class="skill-label">Cloud &amp; Platform</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Kubernetes / EKS</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">Spacelift</span>
+            <span class="skill-tag">AWS Control Tower</span>
+            <span class="skill-tag">Multi-Region Architecture</span>
+            <span class="skill-tag">CI/CD (GitLab, ArgoCD, Jenkins)</span>
+            <span class="skill-tag">Datadog</span>
+            <span class="skill-tag">Tailscale</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group">
+          <div class="skill-label">AI &amp; Engineering</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AI Strategy</span>
+            <span class="skill-tag">AIOps</span>
+            <span class="skill-tag">LLM Integration</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Golang</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Snyk</span>
+            <span class="skill-tag">CrowdStrike</span>
+            <span class="skill-tag">Wiz</span>
+            <span class="skill-tag">Lacework</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS CONTEXT -->
+  <div class="section" style="margin-top:10px;">
+    <div class="section-head">Security Certifications Achieved</div>
+    <div style="font-size:8pt; color:var(--muted); margin-bottom:5px;">Led engineering delivery across all of the following — achieved as Primary Cloud Security Owner at Mendix</div>
+    <div class="skill-tags">
+      <span class="skill-tag" style="background:#eff6ff;color:#1e40af;font-weight:600;">ISO 27001</span>
+      <span class="skill-tag" style="background:#eff6ff;color:#1e40af;font-weight:600;">ISO 27017</span>
+      <span class="skill-tag" style="background:#eff6ff;color:#1e40af;font-weight:600;">ISO 27018</span>
+      <span class="skill-tag" style="background:#eff6ff;color:#1e40af;font-weight:600;">SOC 2 Type 2</span>
+      <span class="skill-tag" style="background:#eff6ff;color:#1e40af;font-weight:600;">SOC 1 Type 2</span>
+      <span class="skill-tag" style="background:#eff6ff;color:#1e40af;font-weight:600;">FedRAMP</span>
+      <span class="skill-tag" style="background:#eff6ff;color:#1e40af;font-weight:600;">PCI-DSS</span>
+      <span class="skill-tag" style="background:#eff6ff;color:#1e40af;font-weight:600;">HIPAA-HITECH</span>
+      <span class="skill-tag">ISO 27701</span>
+      <span class="skill-tag">ISO 22301</span>
+      <span class="skill-tag">ISO 9001</span>
+      <span class="skill-tag">SOC 3 Type 2</span>
+      <span class="skill-tag">ISAE 3402</span>
+      <span class="skill-tag">NEN 7510</span>
+      <span class="skill-tag">DigiD</span>
+      <span class="skill-tag">ENS</span>
+      <span class="skill-tag">NIS2</span>
+      <span class="skill-tag">CSA STAR</span>
+      <span class="skill-tag">Cyber Essentials</span>
+    </div>
+  </div>
+
+  <!-- SPEAKING -->
+  <div class="section" style="margin-top:10px;">
+    <div class="section-head">Speaking</div>
+    <div class="speaking-item">
+      <strong>AWS Summit 2023 — Zurich, Switzerland</strong> &nbsp;·&nbsp;
+      Multi-Regional Architecture for Enterprise Public Cloud: Highest-Tier DR, Global Resiliency &amp; Data Sovereignty
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
